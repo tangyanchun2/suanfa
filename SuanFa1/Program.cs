@@ -1,27 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace SuanFa1
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
             //GetRepeatedCharacter();
             //testCharArray();
+            Console.WriteLine("hi");
+            testRemoveDup();
             Console.ReadKey();
         }
 
         public static void testRemoveDup()
         {
             string s1 = "kkkdjaadklsk";
+            var array = s1?.ToCharArray() ?? new char[0];
+            var rmdStr = removeDup(array);
+            int s = 1;
             //kdjadklsk
         }
 
-        public static void removeDup(Char[] charArray)
+        public static string removeDup(Char[] charArray)
         {
-
+            HashSet<Char> set = new HashSet<char>();
+            StringBuilder sb = new StringBuilder();
+            for(int i=0; i<charArray.Length; i++)
+            {
+                if(!set.Contains(charArray[i]))
+                {
+                    sb.Append(charArray[i]);
+                    set.Add(charArray[i]);
+                }
+            }
+            return sb.ToString();
         }
 
 
