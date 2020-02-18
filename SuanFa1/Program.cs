@@ -11,7 +11,7 @@ namespace SuanFa1
 
             //GetRepeatedCharacter();
             //testCharArray();
-            Console.WriteLine("hi");
+            Console.WriteLine("hi122");
             testRemoveDup();
             Console.ReadKey();
         }
