@@ -8,6 +8,9 @@ namespace SuanFa1
 {
     public class Program
     {
+        const string firstOrderId = "001";
+        const string secondOrderId = "002";
+        const string thirdOrderId = "003";
         static void Main(string[] args)
         {
 
@@ -16,7 +19,50 @@ namespace SuanFa1
             //Console.WriteLine("hi122");
             //testRemoveDup();
             //testlock1();
+
+            //test(LockType.LockThis);
+            //test(LockType.LockString);
+            testa();
             Console.ReadKey();
+        }
+
+        static void testa()
+        {
+            Payment pay = new Payment("s1", 3);
+            Payment pay2 = new Payment("s2", 3);
+            new Thread(()=> { pay.showLock(); }).Start();
+            new Thread(() => { pay.show2Lock(); }).Start();
+            for(int i=0; i<=4; i++)
+            {
+                Thread.Sleep(1200);
+                Console.WriteLine(pay.ThreadNo);
+                Console.WriteLine(pay2.ThreadNo);
+            }
+
+        }
+
+        static void test(LockType lockType)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("------------测试相同订单------------");
+            Console.ForegroundColor = ConsoleColor.White;
+            OrderPay(firstOrderId, 1, lockType);
+            OrderPay(firstOrderId, 2, lockType);
+            OrderPay(firstOrderId, 3, lockType);
+            Thread.Sleep(10000);
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("------------测试不同订单------------");
+            Console.ForegroundColor = ConsoleColor.White;
+            OrderPay(firstOrderId, 1, lockType);
+            OrderPay(secondOrderId, 2, lockType);
+            OrderPay(thirdOrderId, 3, lockType);
+        }
+
+        static void OrderPay(string orderId,int threadNo, LockType lockType)
+        {
+            new Thread(() => new Payment(orderId, threadNo).Pay(lockType)).Start();
+            Thread.Sleep(100);
         }
 
         public static void testlock1()

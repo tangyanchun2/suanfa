@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuanFa1", "SuanFa1\SuanFa1.csproj", "{1AF3C312-AB12-47CE-B122-B2C80835DBE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuanFa1", "SuanFa1\SuanFa1.csproj", "{1AF3C312-AB12-47CE-B122-B2C80835DBE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{2D00BEAB-935C-43B8-B94D-A5E2EBA7C1DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{2D00BEAB-935C-43B8-B94D-A5E2EBA7C1DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadRemind", "ThreadRemind\ThreadRemind.csproj", "{775807E8-0193-42B7-B70F-1B9F4A234A1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2D00BEAB-935C-43B8-B94D-A5E2EBA7C1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D00BEAB-935C-43B8-B94D-A5E2EBA7C1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D00BEAB-935C-43B8-B94D-A5E2EBA7C1DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775807E8-0193-42B7-B70F-1B9F4A234A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775807E8-0193-42B7-B70F-1B9F4A234A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775807E8-0193-42B7-B70F-1B9F4A234A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775807E8-0193-42B7-B70F-1B9F4A234A1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
