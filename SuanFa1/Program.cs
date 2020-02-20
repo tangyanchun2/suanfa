@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SuanFa1
 {
@@ -11,9 +13,18 @@ namespace SuanFa1
 
             //GetRepeatedCharacter();
             //testCharArray();
-            Console.WriteLine("hi122");
-            testRemoveDup();
+            //Console.WriteLine("hi122");
+            //testRemoveDup();
+            //testlock1();
             Console.ReadKey();
+        }
+
+        public static void testlock1()
+        {
+            MyObj myobj = new MyObj();
+            Task.Run(() => { myobj.Print1(); });
+            Thread.Sleep(3000);
+            Console.WriteLine("in out " + myobj.s1);
         }
 
         public static void testRemoveDup()
