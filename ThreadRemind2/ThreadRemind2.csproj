@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{775807E8-0193-42B7-B70F-1B9F4A234A1E}</ProjectGuid>
+    <ProjectGuid>{FF7A3684-DDD4-42D6-B530-1E47ED3B68B2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ThreadRemind</RootNamespace>
-    <AssemblyName>ThreadRemind</AssemblyName>
+    <RootNamespace>ThreadRemind2</RootNamespace>
+    <AssemblyName>ThreadRemind2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,16 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Counter.cs" />
-    <Compile Include="CounterBase.cs" />
-    <Compile Include="CounterNoLock.cs" />
-    <Compile Include="CounterWithLock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreadSample.cs" />
-    <Compile Include="ThreadSample2.cs" />
-    <Compile Include="ThreadSample3.cs" />
-    <Compile Include="ThreadSampleA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
